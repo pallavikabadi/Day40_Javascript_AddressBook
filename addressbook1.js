@@ -1,4 +1,4 @@
-UC1::
+//UC1::
 //To create Person class
 class Person{
     constructor(firstName,lastName,address,city,state,zip,phoneNumber,email){
