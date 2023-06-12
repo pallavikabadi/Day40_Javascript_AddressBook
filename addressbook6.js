@@ -86,7 +86,7 @@ class Person{
     get email(){return this._email;}
 
     set email(email){
-    let emailRegex = RegExp('^[a][b][c][.][a-z]{1,}[@][b][r][i][d][g][e][l][a][b][z][.][c][o][.][a-z]{1,}$');
+    let emailRegex = RegExp('^[a-z0-9]*[.]?[a-z0-9]*(@[a-z]{5}[.][a-z]{3})$');
     if(emailRegex.test(email)){
         this._email = email;
     }

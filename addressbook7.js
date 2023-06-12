@@ -14,7 +14,7 @@ class Person{
     get firstName() {return this._firstName;}
 
     set firstName(firstName){
-    
+
        let firstNameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
         if(firstNameRegex.test(firstName)){
             this._firstName = firstName;
@@ -25,7 +25,7 @@ class Person{
     get lastName() {return this._lastName;}
 
     set lastName(lastName){
-    
+
     let lastNameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
     if(lastNameRegex.test(lastName)){
         this._lastName = lastName;
@@ -36,7 +36,7 @@ class Person{
     get address() {return this._address;}
 
     set address(address){
-    
+
     let addressRegex = RegExp("^[A-Za-z]{4,}$");
     if(addressRegex.test(address)){
         this._address= address;
@@ -47,7 +47,7 @@ class Person{
     get city() {return this._city;}
 
     set city(city){
-    
+
     let cityRegex = RegExp("^[A-Za-z]{4,}$");
     if( cityRegex.test(city)){
         this._city = city;
@@ -57,7 +57,7 @@ class Person{
     get state() {return this._state;}
 
     set state(state){
-    
+
     let stateRegex = RegExp("^[A-Za-z]{4,}$");
     if( stateRegex.test(state)){
         this._state = state;
@@ -67,7 +67,7 @@ class Person{
     get zip() {return this._zip;}
 
     set zip(zip){
-    
+
     let zipRegex =  RegExp('^[0-9]{6}$');
     if(zipRegex.test(zip)){
         this._zip = zip;
@@ -96,9 +96,43 @@ class Person{
 
 //To create person object
 const p1 = new Person("Pallavi","Jadhav","Wakad","Pune","Maharashtra",411057,9565668867,"pallavi08jadhav@gmail.com");const p2 = new Person("Sam","Patil","Peace","Solapur","Maharashtra",413005,9511267527,"abc.sam@bridgelabz.co.yahoo");
+const p2 = new Person("madhu","shinde","Shevgaon","A.Nagar","Maharashtra",414502,9622337527,"madhu@gmail.com");
 
 //UC3 To create array
 
 let addressBook = new Array();
 
 addressBook.push(p1);
+addressBook.push(p2);
+
+const p3 = new Person("Ayansh","Kabadi","Baner","Pune","Maharashtra",411057,8898767823,"ayansh@gmail.com");
+
+addressBook.push(p3);
+
+//To take input from user for address book we will check existing contacts does has similar name or  not
+let fname = prompt("Enter new first name");
+
+//UC7To check for duplicate name in address book
+
+let status = addressBook.reduce((status1,person) =>{
+    if(person._firstName===fname) status1="true"
+    return status1;
+});
+
+if(status==="true"){
+    fname = prompt("Duplicate Entry not allowed try another name");
+}
+
+
+let lname = prompt("Enter new last name");
+let address1 = prompt("Enter new address name");
+let city1 = prompt("Enter new city name");
+let state1 = prompt("Enter new state name");
+let zip1 = prompt("Enter new zip name");
+let phoneNumber1 = prompt("Enter new Phone Number");
+let email1 = prompt("Enter new emil");
+
+//To make person class object
+const p4 = new Person(fname,lname,address1,city1,state1,zip1,phoneNumber1,email1);
+
+addressBook.push(p4);
