@@ -95,7 +95,7 @@ class Person{
 }
 
 //To create person object
-const p1 = new Person("Pallavi","Jadhav","Wakad","Pune","Maharashtra",411057,9565668867,"pallavi08jadhav@gmail.com");const p2 = new Person("Sam","Patil","Peace","Solapur","Maharashtra",413005,9511267527,"abc.sam@bridgelabz.co.yahoo");
+const p1 = new Person("Pallavi","Jadhav","Wakad","Pune","Maharashtra",411057,9565668867,"pallavi08jadhav@gmail.com");
 const p2 = new Person("madhu","shinde","Shevgaon","A.Nagar","Maharashtra",414502,9622337527,"madhu@gmail.com");
 
 //UC3 To create array
